@@ -1,0 +1,28 @@
+{
+    "timelist":[
+        {
+            "startime":8,
+            "endtime":10,
+            "part1min":123,
+            "part2min":123,
+            "part3min":123,
+            "part4min":123,
+            "part1max":123,
+            "part2max":123,
+            "part3max":123,
+            "part4max":123
+        },
+        {
+            "startime":11,
+            "endtime":13,
+            "part1min":123,
+            "part2min":123,
+            "part3min":123,
+            "part4min":123,
+            "part1max":123,
+            "part2max":123,
+            "part3max":123,
+            "part4max":123
+        }
+    ]
+}
