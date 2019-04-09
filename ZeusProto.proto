@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+
+
+message SecurityParameter{
+     string appId = 1;
+     string dhid = 2;
+     string st = 3;
+     string et = 4;
+     string verCode = 5;
+     string chanId = 6;
+     string lang = 7;
+     string imei = 8;
+     int32 kt = 9;
+}
+
+message ProtobufRequestBean{
+     string dhid = 1;
+     string uhid = 2;
+     string pid = 3;
+     string lang = 4;
+     string appId = 5;
+     string mac = 6;
+     string verCode = 7;
+     string chanId = 8;
+     string origChanId = 9;
+     string imei = 10;
+     string verName = 11;
+     string capSsid = 12;
+     string capBssid = 13;
+     string netModel = 14;
+     string ts = 15;
+     string longi = 16;
+     string lati = 17;
+     string mapSp = 18;
+     string userToken = 19;
+     string oid = 20;
+}
+
+
+message QueryPWDRequestBean_Nbaps{
+     string ssid = 1;
+     string bssid = 2;
+     string rssi = 3;
+     int32 securityLevel = 4;
+}
+
+message QueryAllApiRequest{
+    repeated QueryPWDRequestBean_Nbaps scannedApArray = 1;
+     uint64 scannedApArray_Count = 2;
+     string sn = 3;
+     string sr = 4;
+     string lac = 5;
+     string cid = 6;
+
+}
+
+message QueryAllApiResponse_PbApDetail{
+    string apRefId = 1;
+    string newApType = 2;
+    string score = 3;
+    string ccId = 4;
+    string pwd = 5;
+    string authApType = 6;
+    bool isShow = 7;
+}
+
+message QueryAllApiResponse{
+    map<string, QueryAllApiResponse_PbApDetail> apDetail = 1;
+     uint64 apDetail_Count = 3;
+     string qid = 2;
+
+}
+
+
+//-RegDevice
+
+message InitResponseModel{
+     string key = 1;
+     string dhid = 2;
+
+}
+
+
+message InitRequestBean{
+     string sim = 1;
+     string os = 2;
+     string osVer = 3;
+     string osVerCode = 4;
+     string wkVer = 5;
+     string scrl = 6;
+     string scrs = 7;
+     string misc = 8;
+     string manuf = 9;
+     string model = 10;
+     string aid = 11;
+     string soVerCode = 12;
+    map<string, string> fp = 13;
+     uint64 fp_Count = 14;
+}
